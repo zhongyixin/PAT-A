@@ -20,12 +20,12 @@ void dfsTime(int v){
 			minnode=temppath.size();
 			timepath=temppath;
 		}
-		//temppath.pop_back();
+		temppath.pop_back();
 		return;
 	}
 	for(int i=0;i<tempret[v].size();i++)
 	  dfsTime(tempret[v][i]);
-	//temppath.pop_back();
+	temppath.pop_back();
 }
 void Dijkstra(){
 	fill(d,d+maxn,INF);
